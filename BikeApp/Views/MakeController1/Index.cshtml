@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h2 class="text-info">
+            Make of vechiles
+        </h2>
+    </div>
+    <div class="col-sm-6">
+        <a class="btn btn-info" asp-action="Create">
+            <i class="fas fa-motorcycle"></i>
+            Add New Make
+        </a>
+    </div>
+    <div class="col-sm-12">
+       <table class="table table-striped">
+           <thead>
+               <tr>
+                   <th>
+                       @*@Html.DisplayNameFor(x=>x.Name)*@
+                   </th>
+               </tr>
+           </thead>
+           <tbody>
+               @foreach(var item in Model)
+               {
+               <tr>
+                   <td>
+                       @*@Html.DisplayFor(m => m.Make.Name)*@
+                   </td>
+                   <td>
+                       @*@Html.DisplayFor(m => item.Name)*@
+                   </td>
+                   <partial name="_TableButtonPartial" model="item.Id"/>
+               </tr>
+               }
+           </tbody>
+       </table>
+    </div>
+    </div>

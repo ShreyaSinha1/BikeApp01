@@ -1,0 +1,7 @@
+C:\Users\pc\Desktop\STUDYMASH\BikeApp\BikeApp\obj\Debug\netcoreapp3.1\BikeApp.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\STUDYMASH\BikeApp\BikeApp\obj\Debug\netcoreapp3.1\BikeApp.AssemblyInfo.cs
+C:\Users\pc\Desktop\STUDYMASH\BikeApp\BikeApp\obj\Debug\netcoreapp3.1\BikeApp.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\STUDYMASH\BikeApp\BikeApp\obj\Debug\netcoreapp3.1\BikeApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\pc\Desktop\STUDYMASH\BikeApp\BikeApp\obj\Debug\netcoreapp3.1\BikeApp.RazorAssemblyInfo.cache
+C:\Users\pc\Desktop\STUDYMASH\BikeApp\BikeApp\obj\Debug\netcoreapp3.1\BikeApp.RazorAssemblyInfo.cs
+C:\Users\pc\Desktop\STUDYMASH\BikeApp\BikeApp\obj\Debug\netcoreapp3.1\BikeApp.csprojAssemblyReference.cache

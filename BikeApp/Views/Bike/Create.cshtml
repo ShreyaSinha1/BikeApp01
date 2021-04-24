@@ -1,0 +1,132 @@
+﻿@model BikeApp.Models.ViewModel.BikeViewModel 
+@{
+    ViewData["Title"] = "Index";
+}
+<script>
+    $(document).ready(function () {
+        var makeDLL = $("#makeDLL");
+        var modelDll = $("#modelDLL");
+        modelDll.prop('disabled', true);
+        modelDll.change(function () {
+            if ($(this).val() == "0") {
+                modelDll.prop('disabled', true);
+                modelDll.val('0');
+            }
+            else {
+                modelDll.prop('disabled', false);
+                $.ajax({
+                    url: "/api/model",
+                    method: "get",
+                    success: function () {
+                        modelDll.prop('disabled',false),
+                            modelDll.empty(),
+                            modelDll.append($('<option>',{value:'0',text="--select Model-"}))
+                        $(data).each(function (index, item) {
+                            modelDll.append($('<option>', { value: item.id, text=item.Name });
+                        });
+                    }
+                })
+            }
+        })
+    });
+</script>
+<h1>Index</h1>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h2 class="text-info">
+            Add Vechile
+        </h2>
+    </div>
+
+    <form method="post" method="post" enctype="multipart/form-data" asp-action="Create">
+        <div class="form-group row" asp-action="Create">
+            <div class="col-sm-2">
+                <label asp-for="Makes"></label>
+            </div>
+            <div class="col-sm-4">
+                <input asp-for="Bike.MakeId"
+                       asp-items="Model.Make.ToSelectListItem()"
+                       class="form-control" />
+            </div>
+
+        </div>
+        <div class="form-group row" asp-action="Create">
+            <div class="col-sm-2">
+                <label asp-for="Bike.Year"></label>
+            </div>
+            <div class="col-sm-4">
+                <input asp-for="Bike.MakeId"
+                       asp-items="Model.Make.ToSelectListItem()"
+                       class="form-control" />
+            </div>
+
+        </div>
+        <div class="form-group row" asp-action="Create">
+            <div class="col-sm-2">
+                <label asp-for="Bike.Year"></label>
+            </div>
+            <div class="col-sm-4">
+                <input asp-for="Bike.MakeId"
+                       asp-items="Model.Make.ToSelectListItem()"
+                       class="form-control" />
+            </div>
+
+        </div>
+        <div class="form-group row" asp-action="Create">
+            <div class="col-sm-2">
+                <label asp-for="Models"></label>
+            </div>
+            <div class="col-sm-4">
+                <input asp-for="Bike.ModelId"
+                       asp-items="Bike.Models.ToSelectListItem()"
+                       class="form-control" />
+            </div>
+
+        </div>
+        <div class="form-group row" asp-action="Create">
+            <div class="col-sm-2">
+                <label asp-for="Bike.Year"></label>
+            </div>
+            <div class="col-sm-4">
+                <input asp-for="Bike.ModelId"
+                       asp-items="Model.Models.ToSelectListItem()"
+                       class="form-control" />
+            </div>
+
+        </div>
+        <div class="form-group row" asp-action="Create">
+            <div class="col-sm-2">
+                <label asp-for="Bike.Year"></label>
+            </div>
+            <div class="col-sm-4">
+                <input asp-for="Bike.Year"
+                       class="form-control" />
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <label asp-for="Bike.Features"></label>
+            </div>
+            <div class="col-sm-4">
+                <input asp-for="Bike.Features"
+                       class="form-control" />
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <label asp-for="Bike.SellerName"></label>
+            </div>
+            <div class="col-sm-4">
+                <input asp-for="Bike.SellerName"
+                       class="form-control" />
+            </div>
+
+        </div>
+    </form>
+   
+</div>
+
